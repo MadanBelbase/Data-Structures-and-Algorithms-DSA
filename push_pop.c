@@ -32,8 +32,8 @@
         case 5:
         exit(0);
         break;
-        defult:
-        printf("you entered wrong choice");
+        default:
+        printf("you entered wrong choice\n");
     }
     }
     return 0;
@@ -47,7 +47,7 @@
     }
     else
     {
-        printf("enter data to be inserted ");
+        printf("enter data to be inserted\n ");
         scanf("%d",&data);
         top++;
         stack[top]=data;
@@ -58,13 +58,13 @@
     int data;
     if(top==-1)
     {
-        printf("stack is empty");
+        printf("stack is empty\n");
     }
     else
     {
         data=stack[top];
         top--;
-        printf("Deleted data = %d",data);
+        printf("Deleted data = %d\n",data);
     }
  }
  void display()
