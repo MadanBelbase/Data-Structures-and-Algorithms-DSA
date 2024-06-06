@@ -100,9 +100,9 @@ void display()
       printf("queue element are:\n");
       do
       {
-        i=(i+1)%size;
         printf("%d\t",q[i]);
-      } while (i!=rear+1);
+        i=(i+1)%size;
+      } while ((i!=rear+1)%size);
       }
       
     }
@@ -121,7 +121,7 @@ void total_element()
         {
             count++;
             i=(i+1)%size;
-        } while (i!=rear+1);
+        } while ((i!=rear+1)%size);
         
      printf("total no of element = %d\t",count);
     }
