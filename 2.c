@@ -12,7 +12,7 @@ struct student
 int main()
 {
     int i,j,n;
-    printf("Enter nnumber of students ");
+    printf("Enter number of students ");
     scanf("%d",&n);
     struct student s[n];
     for(i=0;i<n;i++)
@@ -29,19 +29,14 @@ int main()
         printf("Enter Address:\n");
         scanf("%s",&s[i].address);
     }
-    for(i=0;i<n-1;i++)
-    {
-        for(j=0;j<n;j++)
-        {
-            if (strcmp(s[i].name, s[j].name) > 0)
-            {    
-                struct student temp;
+    struct student temp;
+    for (i = 0; i < n - 1; i++) {
+        for (j = i + 1; j < n; j++) {
+            if (strcmp(s[i].name, s[j].name) > 0) {
                 temp = s[i];
-                s[i]= s[j];
+                s[i] = s[j];
                 s[j] = temp;
- 
             }
-            
         }
     }
      printf("\nSorted student information:\n");
