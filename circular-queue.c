@@ -77,7 +77,7 @@ else
     item=q[front];
     if(front==rear)
     {
-    rear=front=0;
+    rear=front=-1;
     }
     else
     {
@@ -90,7 +90,7 @@ void display()
 {
     int i;
     i=front;
-    if(front==-1&&rear==-1)
+    if(front==-1 && rear==-1)
     {
         printf("queue is empty");
         return;
@@ -102,7 +102,7 @@ void display()
       {
         printf("%d\t",q[i]);
         i=(i+1)%size;
-      } while ((i!=rear+1)%size);
+      } while ((i!=(rear+1)%size));
       }
       
     }
